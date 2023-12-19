@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+    <title>@ViewData["Title"] - Clube de Futebol</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!--CSS Files -->
+    <link href="~/lib/aos/aos.css" rel="stylesheet" />
+
+
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/lib/bootstrap-icons/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="~/lib/boxicons/css/boxicons.min.css" rel="stylesheet" />
+    <link href="~/lib/glightbox/css/glightbox.min.css" rel="stylesheet" />
+    <link href="~/lib/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link href="~/css/variables.css" rel="stylesheet" asp-append-version="true" />
+    <link href="~/css/site.css" rel="stylesheet" asp-append-version="true" />
+    <link rel="stylesheet" href="~/BravosMaquis.Web.styles.css" asp-append-version="true" />
+    <!-- Template Main CSS File -->
+  
+
+</head>
+<body>
+
+        <!-- ======= Top Bar ======= -->
+        <section id="topbar" class="d-flex align-items-center">
+            <div class="container d-flex justify-content-center justify-content-md-between">
+                <div class="contact-info d-flex align-items-center">
+                    <i class="bi bi-envelope d-flex align-items-center">
+                    <a href="mailto:geral@bravosdomaquis.co.ao">geral@bravosdomaquis.co.ao</a>
+                    </i>
+                <i class="bi bi-phone d-flex align-items-center ms-4"><span>+244 924 251 258</span></i>
+                </div>
+                <div class="social-links d-none d-md-flex align-items-center">
+                    <a href="/Error/NotFound" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="https://web.facebook.com/profile.php?id=100095414350444" target="_blank" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="/Error/NotFound" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="/Error/NotFound" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ======= Header ======= -->
+        <header id="header" class="d-flex align-items-center">
+            <div class="container d-flex align-items-center justify-content-between">
+
+            <h1 class="logo"><a asp-area="" asp-controller="Home" asp-action="index"><img class="img-thumbsnail" src="/lib/LogoClubes/LogoMaquis.png" alt=""><span> | FC</span> Maquis<span>.</span></a></h1>
+                <!-- Uncomment below if you prefer to use an image logo -->
+             
+
+                <nav id="navbar" class="navbar">
+                    <ul>
+                    <li><a class="nav-link scrollto @(ViewContext.RouteData.Values["controller"]?.ToString()=="Home"?"active":"")" asp-area="" asp-controller="Home" asp-action="index">Iníco</a></li>
+                    <li><a class="nav-link scrollto @(ViewContext.RouteData.Values["controller"]?.ToString()=="Calendario"?"active":"")" asp-area="" asp-controller="Calendario" asp-action="index">Calendário</a></li>
+                    <li><a class="nav-link scrollto @(ViewContext.RouteData.Values["controller"]?.ToString()=="Modalidades"?"active":"")" asp-area="" asp-controller="Modalidades" asp-action="index">Modalidades</a></li>
+                    <li><a class="nav-link scrollto @(ViewContext.RouteData.Values["controller"]?.ToString()=="Parceiros"?"active":"")" asp-area="" asp-controller="Parceiros" asp-action="index">Parceiros</a></li>
+                        <li class="dropdown">
+                        <a href="#" class="@(ViewContext.RouteData.Values["controller"]?.ToString()=="Clube"?"active":"")"><span>Clube</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                            <li><a asp-area="" asp-controller="Clube" asp-action="Jogadores">Jogadores</a></li>
+                                <li class="dropdown">
+                                    <a href="#"><span>Administração</span> <i class="bi bi-chevron-right"></i></a>
+                                    <ul>
+                                    <li><a asp-area="" asp-controller="Clube" asp-action="Direccao">Direcção</a></li>
+                                    <li><a asp-area="" asp-controller="Clube" asp-action="Formacao">Formação & Centro de Estágio</a></li>
+                                    </ul>
+                                </li>
+                            <li><a asp-area="" asp-controller="Clube" asp-action="History">História</a></li>
+
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                        <a class="@(ViewContext.RouteData.Values["controller"]?.ToString()=="Loja"?"active":"")" asp-controller="Loja" asp-action="Index"><span>Loja</span> <i class="bi bi-chevron-down"></i></a>
+                            <ul>
+                            <li><a asp-area="" asp-controller="Loja" asp-action="Bilheteria"><i class="bi bi-card-heading"></i>Bilheteria</a></li>
+                            <li><a asp-area="" asp-controller="Loja" asp-action="Marketplace"><i class="bi bi-shop"></i>Marketplace</a></li>
+
+                            </ul>
+                        </li>
+                    <li><a class="nav-link scrollto @(ViewContext.RouteData.Values["controller"]?.ToString()=="Contacto"?"active":"")" asp-area="" asp-controller="Contacto" asp-action="Index">Contacto</a></li>
+                    </ul>
+
+                </nav><!-- .navbar -->
+            <a class="btn-book-a-table" asp-area="" asp-controller="Calendario" asp-action="Pontuacao"> <i class="bi bi-table"></i> Pontuação</a>
+                <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+                <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+            </div>
+        </header><!-- End Header -->
+   
+             @* Zona principal do sitte *@
+        <main role="main" class="main">
+            @RenderBody()
+        </main>
+
+
+    <footer id="footer">
+
+        <div class="footer-newsletter">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-6">
+                        <h4>Inscreva-se em nossa Newslatter</h4>
+                        <p>Ao submeter seu e-mail, poderá estar a par de novos dados publicados neste site.</p>
+                        <form action="" method="post">
+                            <input type="email" name="email"><input type="submit" value="Subscreva-se">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h3>Bravos do Maquis<span>.</span></h3>
+                        <p>
+                            Rua do Saurimo | Cine Luena Nº 4352 <br>
+                            Luena, Bairro Mandembue
+                            <hr> Bairro Social da Juventude<br>
+                            Moxico-Angola <br><br>
+                            <strong>Phone:</strong> +244 924 251 258<br>
+                            <strong>Email:</strong> geral@bravosdomaquis.co.ao<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Links Uteis</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Home" asp-action="Index">Início</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Calendario" asp-action="Index">Calendário</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Modalidades" asp-action="Index">Modalidades</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Parceiros" asp-action="Index">Parceiros</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Home" asp-action="Privacy">Políticas de Privacidade</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Institucional</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Jogadores</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Direcção</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Loja & Bilheteria</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Formação & Centro de Estágio</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a asp-area="" asp-controller="Error" asp-action="NotFound">Social</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4>Nossas Redes Sociais</h4>
+                        <p>Siga-nos tambem em nossas redes sociais<span>.</span></p>
+                        <div class="social-links mt-3">
+                            <a href="/Error/NotFound" class="twitter"><i class="bx bxl-twitter"></i></a>
+                            <a href="https://web.facebook.com/profile.php?id=100095414350444" target="_blank" class="facebook"><i class="bx bxl-facebook"></i></a>
+                            <a href="/Error/NotFound" class="instagram"><i class="bx bxl-instagram"></i></a>
+                            <a href="/Error/NotFound" class="google-plus"><i class="bx bxl-skype"></i></a>
+                            <a href="/Error/NotFound" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="container py-4">
+            <div class="copyright">
+                &copy; Copyright <strong><span>Bravos do Maquis</span></strong>. Todos os Direitos Reservado
+            </div>
+            <div class="credits">
+            
+                Desenvolvido por <a href="http://adilsonfernando.42web.io/" target="_blank">Adilson Fernando</a>
+            </div>
+        </div>
+    </footer><!-- End Footer -->
+    <div id="preloader"></div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <script src="~/lib/purecounter/purecounter_vanilla.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/aos/aos.js"></script>
+    <script src="~/lib/glightbox/js/glightbox.min.js"></script>
+    <script src="~/lib/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/lib/swiper/swiper-bundle.min.js"></script>
+    <script src="~/lib/waypoints/noframework.waypoints.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Vendor JS Files -->
+    
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

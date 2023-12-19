@@ -1,0 +1,414 @@
+﻿@using BravosMaquis.Models
+@{
+    ViewData["Title"] = "Bravos do Maquis";
+}
+@{
+    // List<ModelClassificacao> Classificacao = new List<ModelClassificacao>();
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Bravos do Maquis", TotalJogos=3,TotalVitorias=1,TotalDerrotas=1,TotalEmpates=1,GolosMarcados=2, GolosSofridos=2,Logotipo="LogoMaquis.png" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Clube Desportivo Sagrada Esperança", TotalJogos = 3, TotalVitorias = 3, TotalDerrotas = 0, TotalEmpates = 0, GolosMarcados = 5, GolosSofridos = 0, Logotipo = "LogoSagrada.png" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Atlético Petroleos de Luanda", TotalJogos = 3, TotalVitorias = 2, TotalDerrotas = 0, TotalEmpates = 1, GolosMarcados = 7, GolosSofridos = 3, Logotipo = "LogoPetro.jpeg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Wiliete Sporting Clube de Benguela", TotalJogos = 3, TotalVitorias = 2, TotalDerrotas = 1, TotalEmpates = 0, GolosMarcados = 6, GolosSofridos = 2, Logotipo = "LogoWiliete.jpeg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Desportivo da Huila", TotalJogos = 2, TotalVitorias = 2, TotalDerrotas = 0, TotalEmpates = 0, GolosMarcados = 3, GolosSofridos = 0, Logotipo = "LogoDesportivoHuila.jpeg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Clube Desportivo 1º de Agosto", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 2, TotalEmpates = 0, GolosMarcados = 2, GolosSofridos = 1, Logotipo = "LogoDagosto.png" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Kabuscorp do Palanca", TotalJogos = 2, TotalVitorias = 1, TotalDerrotas = 0, TotalEmpates = 1, GolosMarcados = 2, GolosSofridos = 0, Logotipo = "LogoKabuscorp.jpeg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Desportivo da Lunda Sul", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 1, TotalEmpates = 1, GolosMarcados = 2, GolosSofridos = 2, Logotipo = "LogoLundaSul.png" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "São Salvador do Kongo", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 2, TotalEmpates = 0, GolosMarcados = 2, GolosSofridos = 1, Logotipo = "LogosaoSalvador.jpeg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Clube Recreativo União de Malange", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 2, TotalEmpates = 0, GolosMarcados = 2, GolosSofridos = 1, Logotipo = "LogoMalange.jpeg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Santa Rita de Cássia", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 2, TotalEmpates = 0, GolosMarcados = 2, GolosSofridos = 1, Logotipo = "LogoSantaRita.jpg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Académica Petroleos Clube do Lobito", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 2, TotalEmpates = 0, GolosMarcados = 2, GolosSofridos = 1, Logotipo = "LogoAcademica.jpeg" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Clube Desportivo Interclube", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 2, TotalEmpates = 0, GolosMarcados = 2, GolosSofridos = 1, Logotipo = "LogoInter.png" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Sporting de Cabinda", TotalJogos = 3, TotalVitorias = 1, TotalDerrotas = 2, TotalEmpates = 0, GolosMarcados = 2, GolosSofridos = 1, Logotipo = "LogoSportingcabinda.png" });
+
+    // Classificacao.Add(new ModelClassificacao { Equipa = "Recreativo do Libolo", TotalJogos = 3, TotalVitorias = 0, TotalDerrotas = 3, TotalEmpates = 0, GolosMarcados = 0, GolosSofridos = 4, Logotipo = "LogoLibolo.jpeg" });
+
+    //Noticia
+    // List<ModelNoticia> Noticia = new List<ModelNoticia>();
+    // Noticia.Add(new ModelNoticia
+    // {
+    //          Titulo="Futebol de Formação", /* Categoria="Institucional", ImagemCapa="noticia1.jpg", */
+    //          Conteudo="A Nossa equipe de futebol no escalão de Juniores, ficou na segunda posição no torneio 11 de Novembro realizado na provincia do Moxico."
+    // });
+
+    // Noticia.Add(new ModelNoticia
+    //         {
+    //             Titulo = "Sorteio Na Compra de Bilhete",
+    //             // Categoria = "Social",   ImagemCapa="premeado.jpg",
+    //             Conteudo = "Sorteio realizado ontem no intervalo do jogo na compra de um bilhete. Muitos adeptos saíram agraciados com vários prémios como Smartphone."
+    //         });
+    // //banner
+    // List<ModelBanner> Banner = new List<ModelBanner>();
+    // Banner.Add(new ModelBanner
+    //         {
+    //             Titulo = "Não Perca a Oportunidade de Ser Agraciado Com Nossos Prémios Fantásticos!",
+    //             Descricao = "Seja sorteado, quanto mais jogos assistires, mas chances tens de ganhar.",
+    //             // ComLink=true,
+    //             // TituloLink="Reservar Bilhete", Link="", Imagem="bilhete.jpg"
+    //         });
+    // Banner.Add(new ModelBanner
+    //         {
+    //             Titulo = "Partida sem Golos entre Maquis e Kabuscorp do Palancas!",
+    //             // Descricao = "Veja a Noticia completa na area social ou assista no link a baixo.", Imagem="kabuscorp_e_maquis.jpg",
+    //             // ComLink = true, LinkVideo=true,
+    //             // TituloLink = "Ver Jogo Passado",
+    //             // Link = "https://web.facebook.com/watch/?v=7723649274318918",
+
+    //         });
+    // //Jogos do calendário
+    // List<ModelJogos> jogos = new List<ModelJogos>()
+    // {
+    // new ModelJogos{Campeonato="Girabola", Jornada="7" ,Hora=new TimeSpan(15,30,0), DataJogo=new DateTime(2023,12,9), Casa=("Futebol Clube Bravos do Maquis","LogoMaquis.png"), Visita=("Clube Desportivo da Huila","LogoDesportivoHuila.jpeg"), Estadio="Mundunduleno", Activo=true},
+    //    new ModelJogos{Campeonato="Girabola", Jornada="8" ,Hora=new TimeSpan(15,30,0), DataJogo=new DateTime(2023,12,17), Visita=("Futebol Clube Bravos do Maquis","LogoMaquis.png"), Casa=("Wiliete de Benguela","LogoWiliete.jpeg"), Estadio="Ombaka", Activo=false}   ,
+    //        new ModelJogos{Campeonato="Girabola", Jornada="9" ,Hora=new TimeSpan(15,30,0), DataJogo=new DateTime(2023,12,23), Visita=("Futebol Clube Bravos do Maquis","LogoMaquis.png"), Casa=("Academica do Lobito","LogoAcademica.jpeg"), Estadio="Buraco", Activo=false}  ,
+    //           new ModelJogos{Campeonato="Girabola", Jornada="10" ,Hora=new TimeSpan(15,30,0), DataJogo=new DateTime(2023,12,29), Casa=("Futebol Clube Bravos do Maquis","LogoMaquis.png"), Visita=("Clube Desportivo 1º de Agosto","LogoDagosto.png"), Estadio="Mundunduleno", Activo=false}
+    // };
+
+}
+
+<section id="hero"  class="hero carousel  carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+
+    <div class="carousel-inner">
+        <!-- Items start-->
+        <div class="carousel-item active">
+            <div class="container">
+                <div class="row justify-content-between gy-5">
+                    <div class="col-lg-5  order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                        <h2 data-aos="fade-up" class="reduzirLetra">Um dos melhores encontros de Sempre. <span>Para não Perder</span></h2>
+                        <p data-aos="fade-up" data-aos-delay="100" class="h3">Jogo da 7ª jornada <span>Maquis</span> e <span>Desportivo da Huila</span> </p>
+                        <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                            <a href="#book-a-table" class="btn-book-a-table">Reservar Bilhete</a>
+                            <a href="https://web.facebook.com/watch/?v=7723649274318918" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>Assitir em Directo</span></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+                        <img src="~/lib/assets/img/logo2.svg" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300">
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!--
+        <!-- End Carousel Item -->
+        @* @foreach (var item in Banner)
+        {
+       
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row justify-content-between gy-5">
+                        <div class="col-lg-5 order-2 order-lg-1 d-flex flex-column justify-content-center align-items-center align-items-lg-start text-center text-lg-start">
+                            <h2 data-aos="fade-up" class="reduzirLetra">@item.Titulo</h2>
+                            <blockquote class="blockquote">
+                                <p class="h3" data-aos="fade-up" data-aos-delay="100">@item.Descricao.</p>
+                            </blockquote>
+                            <div class="d-flex" data-aos="fade-up" data-aos-delay="200">
+                               @*  @if(item.ComLink){
+                                    if (item.LinkVideo)
+                                    {
+                                        <a href="@item.Link" class="glightbox btn-watch-video d-flex align-items-center"><i class="bi bi-play-circle"></i><span>@item.TituloLink</span></a>
+                                    }
+                                    else
+                                    {
+                                        <a href="@item.Link" class="btn-book-a-table">@item.TituloLink</a>
+                                    }
+                          
+                                
+                                } 
+                               
+                            </div>
+                        </div>
+                        <div class="col-lg-5 order-1 order-lg-2 text-center text-lg-start">
+                            @* <img src="~/lib/imagensbanner/bilhete.jpg" /> 
+                            <img src="~/lib/imagensbanner/@item.Imagem.ToLower()" class="img-fluid" alt="" data-aos="zoom-out" data-aos-delay="300"> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- End Carousel Item -->
+        } 
+
+
+        <!-- items end-->
+    </div>  -->
+
+    <a class="carousel-control-prev" href="#hero" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+    </a>
+
+    <a class="carousel-control-next" href="#hero" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+    </a>
+
+    <ol class="carousel-indicators"></ol>
+
+</section><!-- End Hero Section -->
+
+<!-- ======= Next Mutch section ======= -->
+   @*  @foreach (var item in jogos.FindAll(x=>x.Activo).Take(1))
+    {
+<section id="skills" class="skills">
+  
+        <div class="container  text-center " data-aos="fade-up">
+            <div class="section-title">
+                <h2>@item.Campeonato</h2>
+                <h2><span>@item.Jornada</span>ª Jornada</h2>
+                <h3><span>@item.Estadio</span></h3>
+                <p><i class="bi bi-calendar-date"></i> <b>@item.DataJogo.ToString("d 'de' MMMM 'de' yyyy")</b></p>
+            </div>
+            <div class="row skills-content shadow-sm p-3 align-items-center align-self-center" style="margin:0 auto;">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-auto align-items-center">
+                    <img src="~/lib/LogoClubes/@item.Casa.Item2" alt="Image" width="80" class="img-fluid img-thumbnail">
+                    <p class="h4">@item.Casa.Item1 <span>(Casa)</span></p>
+                </div>
+                <div class="col-lg-2">
+                    <div class="section-title">
+                        <h2>VS</h2>
+                    </div>
+                </div>
+                <div class="col-lg-auto align-items-center">
+                    <img src="~/lib/LogoClubes/@item.Visita.Item2" alt="Image" width="80" class="img-fluid img-thumbnail">
+                    <p class="h4">@item.Visita.Item1 <span>(Visita)</span></p>
+                </div>
+            </div>
+        </div>
+  
+    
+ 
+</section><!-- End NextMutch Section --> *@
+<!-- ======= Counts Section ======= -->
+<section id="counts" class="counts">
+    <div class="container" data-aos="fade-up">
+
+        <div class="row">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="count-box">
+                    <i class="bi bi-alarm"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Dias</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-md-0">
+                <div class="count-box">
+                    <i class="bi bi-alarm"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="143" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Horas</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                <div class="count-box">
+                    <i class="bi bi-alarm"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="8580" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Minutos</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 mt-5 mt-lg-0">
+                <div class="count-box">
+                    <i class="bi bi-alarm"></i>
+                    <span data-purecounter-start="0" data-purecounter-end="30" data-purecounter-duration="1" class="purecounter"></span>
+                    <p>Segundos</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Counts Section -->
+}@*Fim da codificação tambem*@
+<!--Pontos e calendário-->
+<div class="container-fluid bg-body-tertiary" data-aos="fade-up">
+    <div class="section-title">
+        <h2>Calendário</h2>
+        <h3>Jogos dos Proximos <span>7 dias</span></h3>
+        <p>Não fique desatento, veja aqui os jogos por acontecer.</p>
+    </div>
+
+    <div class="container-fluid">
+        <!-- ======= Testimonials Section ======= -->
+        <section id="testimonials" class="testimonials">
+            <div class="container" data-aos="fade-up">
+
+                <div class="testimonials-slider swiper">
+                    <div class="swiper-wrapper">
+
+                        @*Slide para proximos jogos do calendário*@
+                         @*  @foreach (var item in jogos)
+                            {                     
+                            <div class="swiper-slide">
+                                <div class="testimonial-item">
+                                    <div class="section-title">
+                                        <h2>@item.Campeonato</h2>
+                                        <h2><span>@item.Jornada</span>ª Jornada</h2>
+                                    </div>
+                                    <div class="row align-items-md-center">
+                                        <div class="col">
+                                            <img src="~/lib/LogoClubes/@item.Casa.Item2" class="testimonial-img w-25" alt="">
+                                            <h3>@item.Casa.Item1</h3>
+                                            <h4>Casa</h4>
+                                        </div>
+                                        <span class="col">VS</span>
+                                        <div class="col">
+                                            <img src="~/lib/LogoClubes/@item.Visita.Item2" class="testimonial-img w-25" alt="">
+                                            <h3>@item.Visita.Item1</h3>
+                                            <h4>Visitante</h4>
+                                        </div>
+                                    </div>
+                                    <h2>@item.DataJogo.ToString("d 'de' MMMM 'de' yyyy")</h2>
+                                    <p>Estádio @item.Estadio</p>
+                                </div>
+                            </div>
+
+                            <!-- End next mutch item -->
+                        } *@
+
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+
+            </div>
+        </section><!-- End Testimonials Section -->
+    </div>
+    <section id="" class="container-md content d-flex flex-column justify-content-center h-100">
+        <div class="section-title">
+            <h2>Calendário</h2>
+            <h3>Quadro de <span>Pontuação</span> Resumido</h3>
+            <p>Confira o estado de cada clube quanto ao aproveitamento.</p>
+        </div>
+        <div class="">
+            <table class="table table-bordered table-hover text-center">
+                <thead>
+                    <tr>
+                        <th>Cls</th>
+                        <th>Clube</th>
+                        <th>J</th>
+                        <th>V</th>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>Golos</th>
+                        <th>A.v</th>
+                        <th>Pts</th>
+                        <th>%</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @{
+                        int pos = 1;
+                    }
+                   @*  @foreach (var item in Classificacao.OrderByDescending(x=>x.TotalPontos).Take(15))
+                    {
+                        int j = item.TotalJogos;
+                        int v = item.TotalVitorias;
+                        int e = item.TotalEmpates;
+                        int d = item.TotalDerrotas;
+
+                        string golos = item.DescGolos;
+                        string av = item.AV;
+                        int pontos = item.TotalPontos;
+                        decimal percentagem = item.Aproveitamento;
+                        <tr>
+                            <td>@pos;º</td>
+                            <td style="text-align:left !important"><img style="width:40px !important" src="~/lib/logoclubes/@item.Logotipo.ToLower()" alt="" > @item.Equipa</td>
+                            <td>@j</td>
+                            <td>@v</td>
+                            <td>@e</td>
+                            <td>@d</td>
+                            <td>@golos</td>
+                            <td>@av</td>
+                            <td>@pontos</td>
+                            <td>@percentagem</td>
+                        </tr>
+                        pos++;
+                    } *@
+                </tbody>
+            </table>
+        </div>
+        <a href="/Error/NotFound" class="btn btn-outline-primary btn-sm" type="button" role="button"> <i class="bi bi-cloud-download"></i> Baixar Calendário Completo</a>
+    </section>
+
+</div>
+<!-- ======= Events Section (Noticias) ======= -->
+<section id="events" class="events">
+    <div class="container" data-aos="fade-up">
+    
+        <div class="section-title">
+            <h2>Social</h2>
+            <h3>Ultimas <span>Noticias</span> Publicadas</h3>
+        </div>
+
+        <div class="slides-3 swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+                @{
+                //     foreach (var item in Noticia)
+              
+                // {
+                //     <div class="swiper-slide event-item d-flex flex-column justify-content-end" style="background-image: url('/lib/imgensnoticias/@item.ImagemCapa'); background-position:center">
+                //         <h3>@item.Titulo</h3>@* <img src="~/lib/imgensnoticias/noticia1.jpg" /> *@
+                //         <div class="price align-self-start">@item.Categoria</div>
+                //         <p class="description">
+                //            @item.Conteudo.
+
+                //         </p>
+                //         <hr><a asp-area="" asp-controller="Error" asp-action="NotFound" class="btn btn-primary" style="z-index: 999;">Ler Matéria</a>
+                //     </div>
+
+                //     <!-- End Event item -->
+                // }
+                }
+
+            </div>   
+            <div class="swiper-pagination"></div>
+        </div>
+
+    </div>
+</section><!-- End Events Section -->
+<!-- ======= Clients Section ======= -->
+<section id="clients" class="clients">
+
+    <div class="container" data-aos="zoom-out">
+        <div class="section-title">
+            <h2>Parceiros</h2>
+            <h3>Parceiros e  <span>Patrocinadores</span> do Clube</h3>
+        </div>
+        <div class="clients-slider swiper">
+         
+                <div class="swiper-wrapper align-items-center">
+              
+                    @for (int i = 1; i <= 5; i++)
+                    {      //imagens de parceiros
+                        string imagem = $"{i}.jpg";
+                    <div class="swiper-slide">  <a asp-action="NotFound" asp-controller="Error"><img src="~/lib/assets/img/clients/@imagem" class="img-fluid" alt="">  </a></div>
+                    }
+              
+                </div>
+           
+          
+        </div>
+
+    </div>
+ 
+</section><!-- End Clients Section -->
+<script>
+    var dataD = new Date('2023-12-09T15:00:00');
+    var dataActual = new Date();
+    var dif = dataD - dataActual;
+    var minRest = Math.floor(dif / (1000 * 60));
+
+    $('.purecounter').attr('data-purecounter-end', minRest);
+        §('.purecounter').pureCounter();
+</script>
+                                  

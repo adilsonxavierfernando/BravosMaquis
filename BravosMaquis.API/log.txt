@@ -1,0 +1,36 @@
+2023-12-19 15:47:40.915 +01:00 [INF] Executed DbCommand (22ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='maquisdbwebapi' AND TABLE_NAME='__EFMigrationsHistory';
+2023-12-19 15:47:41.002 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1 FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA='maquisdbwebapi' AND TABLE_NAME='__EFMigrationsHistory';
+2023-12-19 15:47:41.057 +01:00 [INF] Executed DbCommand (7ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `MigrationId`, `ProductVersion`
+FROM `__EFMigrationsHistory`
+ORDER BY `MigrationId`;
+2023-12-19 15:47:41.077 +01:00 [INF] No migrations were applied. The database is already up to date.
+2023-12-19 15:47:41.128 +01:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE WHEN COUNT(*) = 0 THEN FALSE ELSE TRUE END
+FROM information_schema.tables
+WHERE table_type = 'BASE TABLE' AND table_schema = 'maquisdbwebapi'
+2023-12-19 15:47:41.439 +01:00 [INF] Iniciando a API RESTFULL
+2023-12-19 15:47:41.747 +01:00 [INF] Now listening on: http://localhost:5189
+2023-12-19 15:47:41.751 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2023-12-19 15:47:41.752 +01:00 [INF] Hosting environment: Development
+2023-12-19 15:47:41.752 +01:00 [INF] Content root path: C:\Users\ASUS\source\repos\BravosMaquis\BravosMaquis.API
+2023-12-19 15:47:45.247 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5189/swagger/index.html - null null
+2023-12-19 15:47:46.312 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5189/swagger/index.html - 200 null text/html;charset=utf-8 1081.0676ms
+2023-12-19 15:47:46.334 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5189/_framework/aspnetcore-browser-refresh.js - null null
+2023-12-19 15:47:46.345 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5189/_framework/aspnetcore-browser-refresh.js - 200 13768 application/javascript; charset=utf-8 10.3935ms
+2023-12-19 15:47:46.362 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5189/_vs/browserLink - null null
+2023-12-19 15:47:46.508 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5189/_vs/browserLink - 200 null text/javascript; charset=UTF-8 147.0731ms
+2023-12-19 15:47:46.734 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5189/swagger/v1/swagger.json - null null
+2023-12-19 15:47:47.182 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5189/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 448.0632ms
+2023-12-19 15:51:38.355 +01:00 [INF] Request starting HTTP/1.1 GET http://localhost:5189/api/Clube - null null
+2023-12-19 15:51:38.365 +01:00 [INF] Executing endpoint 'BravosMaquis.API.Controllers.ClubeController.Get (BravosMaquis.API)'
+2023-12-19 15:51:38.398 +01:00 [INF] Route matched with {action = "Get", controller = "Clube"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Get() on controller BravosMaquis.API.Controllers.ClubeController (BravosMaquis.API).
+2023-12-19 15:51:38.850 +01:00 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT `c`.`Id`, `c`.`Clube`, `c`.`DataCriacao`, `c`.`DataUltimaAtualizacao`, `c`.`Emblema`, `c`.`Historia`, `c`.`Sigla`
+FROM `Clubes` AS `c`
+2023-12-19 15:51:38.868 +01:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[BravosMaquis.Models.Domain.ModelClubes, BravosMaquis.Models, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2023-12-19 15:51:38.885 +01:00 [INF] Executed action BravosMaquis.API.Controllers.ClubeController.Get (BravosMaquis.API) in 483.4539ms
+2023-12-19 15:51:38.886 +01:00 [INF] Executed endpoint 'BravosMaquis.API.Controllers.ClubeController.Get (BravosMaquis.API)'
+2023-12-19 15:51:38.894 +01:00 [INF] Request finished HTTP/1.1 GET http://localhost:5189/api/Clube - 200 null application/json; charset=utf-8 540.4295ms

@@ -1,0 +1,78 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Contacte-Nos";
+}
+<!-- ======= Contact Section ======= -->
+<section id="contact" class="contact">
+    <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+            <h2>Contacto</h2>
+            <h3><span>Contacte-noss</span></h3>
+            <p><b>Conecte-se Connosco:</b> Deixe sua paixão pelo futebol nos guiar. Estamos ansiosos para ouvir suas histórias, perguntas e sugestões. Juntos somos Bravos, juntos celebramos o jogo que amamos!</p>
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-6">
+                <div class="info-box mb-4">
+                    <i class="bx bx-map"></i>
+                    <h3>Nosso Endereço</h3>
+                    <p>Bairro Social da Juventude, Luena, Rua da Centralidade</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="info-box  mb-4">
+                    <i class="bx bx-envelope"></i>
+                    <h3>Nosso Correio Electrônico</h3>
+                    <p>geral@bravosdomaquis.co.ao</p>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="info-box  mb-4">
+                    <i class="bx bx-phone-call"></i>
+                    <h3>Ligue-Nos</h3>
+                    <p>+244 924 251 258</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+
+            <div class="col-lg-6 ">
+                <iframe class="mb-4 mb-lg-0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7811.815930652489!2d19.884644161330954!3d-11.771530791640899!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1bd1c145569993fd%3A0x1d9849cacefa96f1!2sFutebol%20Clube%20Bravos%20do%20Maquis!5e0!3m2!1spt-PT!2sao!4v1701644883699!5m2!1spt-PT!2sao" frameborder="0" style="border:0; width: 100%; height: 384px;" allowfullscreen></iframe>
+            </div>
+
+            <div class="col-lg-6">
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <div class="row">
+                        <div class="col form-group">
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Seu nome" required>
+                        </div>
+                        <div class="col form-group">
+                            <input type="email" class="form-control" name="email" id="email" placeholder="Seu Correio Electrônico" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" class="form-control" name="subject" id="subject" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea class="form-control" name="message" rows="5" placeholder="Messagem" required></textarea>
+                    </div>
+                    <div class="my-3">
+                        <div class="loading">Loading</div>
+                        <div class="error-message"></div>
+                        <div class="sent-message">Sua Mensagem foi enviada. Obrigado!</div>
+                    </div>
+                    <div class="text-center"><button type="submit">Submeter Mensagem</button></div>
+                </form>
+            </div>
+
+        </div>
+
+    </div>
+</section><!-- End Contact Section -->

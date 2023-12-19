@@ -1,0 +1,116 @@
+﻿<div class="top-row ps-3 navbar navbar-light ">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white" href="">Bravos do Maquis - Admin</a>
+    </div>
+</div>
+
+<input type="checkbox" title="Navigation menu" class="navbar-toggler" />
+
+<div class="nav-scrollable" onclick="document.querySelector('.navbar-toggler').click()">
+    <nav class="flex-column">
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+                <span class="bi bi-house-door-fill-nav-menu" aria-hidden="true"></span> Dashboard
+            </NavLink>
+        </div>
+
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="counter">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Postagens
+            </NavLink>
+            <ul>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Social
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> SlideShow
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+  
+        @*Clube*@
+         <div class="nav-item px-3">
+            <NavLink class="nav-link" href="#cadastro">
+                <span class="bi bi-arrow-down-short" aria-hidden="true"></span> Clube
+            </NavLink>
+            <ul>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Jogadores
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Equipa Técnica
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+  @* Calendário e Clubes*@
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="#cadastro">
+                <span class="bi bi bi-arrow-down-short" aria-hidden="true"></span> Calendário
+            </NavLink>
+            <ul>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-joystick" aria-hidden="true"></span> Clubes
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-controller" aria-hidden="true"></span> Jogos
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Classificações
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Estádio
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="sociedade">
+                <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Sócios
+            </NavLink>
+        </div>
+               @*Institucional*@
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="institucional">
+                <span class="bi bi-arrow-down-short" aria-hidden="true"></span> Institucional
+            </NavLink>
+            <ul>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Membros Directivos
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Sobre o Clube
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Bilheteria
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink class="nav-link" href="cadastro">
+                        <span class="bi bi-plus-square-fill-nav-menu" aria-hidden="true"></span> Productos Diversos
+                    </NavLink>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</div>
+
